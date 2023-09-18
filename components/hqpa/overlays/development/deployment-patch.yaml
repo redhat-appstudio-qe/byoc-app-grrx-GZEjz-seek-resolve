@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hqpa
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-mujl-tenant/byoc-app-grrx/hqpa@sha256:eb3b8b8759e8af8d96ccea1ae92ec125923d6d9d0a93358926fca1d2184dde2b
+        name: my-java-quarkus
+        resources: {}
+status: {}

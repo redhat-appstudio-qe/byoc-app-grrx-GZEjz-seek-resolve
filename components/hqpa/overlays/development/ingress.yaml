@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: hqpa
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: hqpa
+    app.kubernetes.io/part-of: byoc-app-grrx
+  name: hqpa
+spec:
+  rules:
+  - host: hqpa-byoc-mujl-tenant.apps.d0a2acbb18bb67d85d5a.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: hqpa
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
