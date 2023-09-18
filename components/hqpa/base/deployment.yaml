@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: hqpa
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-mujl-tenant/byoc-app-grrx/hqpa@sha256:eb3b8b8759e8af8d96ccea1ae92ec125923d6d9d0a93358926fca1d2184dde2b
         name: my-java-quarkus
         ports:
         - containerPort: 8081
